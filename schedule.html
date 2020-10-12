@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>School Schedule</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<style>
-    table {
-        border-collapse: collapse;
-        border: 1.5px solid #000;
-    }
-
-    td, th {
-        border: 1.5px solid #000;
-        padding: 0.5rem;
-        text-align: left;
-    }
-</style>
 <body>
+    <header>
+        <div id="time"></div>
+        <button class="button-red" id="highlight-lectures" onclick="highlightLectures()">Highlight Lecture</button>
+        <button class="button-blue" id="highlight-practices" onclick="highlightPractices()">Highlight Practice</button>
+        <button class="button-black" id="highlight-all" onclick="highlightPractices(); highlightLectures();">Highlight All</button>
+    </header>
     <table>
+        <div id="timer"></div>
         <thead>
             <tr style="background-color: lightgray">
                 <th></th>
@@ -38,99 +35,99 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr id="monday">
                 <th style="background-color: lightgray">Monday</th>
-                <td></td>
-                <td></td>
-                <td colspan="2" style="background-color: lightcoral;">
+                <td class="monday1"></td>
+                <td class="monday2"></td>
+                <td class="monday3" colspan="2" class="lecture">
                     VIA<br>M.Radecký<br>POREC2, P/01
                 </td>
-                <td></td>
-                <td></td>
-                <td colspan="2" style="background-color: lightcoral;">
+                <td class="monday5"></td>
+                <td class="monday6"></td>
+                <td class="monday7" colspan="2" class="lecture">
                     POS<br><br>P/01
                 </td>
-                <td colspan="2" style="background-color: lightskyblue;">
+                <td class="monday9" colspan="2"  class="practice">
                     VIA<br>M.Radecký<br>POREB113, C/02
                 </td>
-                <td colspan="2" style="background-color: lightskyblue;">
+                <td class="monday11" colspan="2"  class="practice">
                     TAMZ II<br>R.Fusek<br>PORRV203, C/01
                 </td>
-                <td></td>
-                <td></td>
+                <td class="monday13"></td>
+                <td class="monday14"></td>
             </tr>
-            <tr>
+            <tr id="tuesday">
                 <th style="background-color: lightgray">Tuesday</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colspan="3" style="background-color: lightskyblue;">
+                <td class="tuesday1"></td>
+                <td class="tuesday2"></td>
+                <td class="tuesday3"></td>
+                <td class="tuesday4" colspan="3" class="practice">
                     POS<br><br>C/04
                 </td>
-                <td></td>
-                <td></td>
-                <td colspan="2" style="background-color: lightcoral;">
+                <td class="tuesday7"></td>
+                <td class="tuesday8"></td>
+                <td class="tuesday9" colspan="2" class="lecture">
                     VIS<br><br>P/01
                 </td>
-                <td colspan="2" style="background-color: lightskyblue;">
+                <td class="tuesday11" colspan="2"  class="practice">
                     C# I<br>R.Ficek<br>POREB430, C/03
                 </td>
-                <td></td>
-                <td></td>
+                <td class="tuesday13"></td>
+                <td class="tuesday14"></td>
             </tr>
-            <tr>
+            <tr id="wednesday">
                 <th style="background-color: lightgray">Wednesday</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colspan="2" style="background-color: lightcoral;">
+                <td class="wednesday1"></td>
+                <td class="wednesday2"></td>
+                <td class="wednesday3"></td>
+                <td class="wednesday4"></td>
+                <td class="wednesday5" colspan="2" class="lecture">
                     TAMZ II<br>M.Krumnikl<br>POREC3, P/01
                 </td>
-                <td></td>
-                <td></td>
-                <td colspan="2" style="background-color: lightskyblue;">
+                <td class="wednesday7"></td>
+                <td class="wednesday8"></td>
+                <td class="wednesday9" colspan="2"  class="practice">
                     VIS <strong>Lichý</strong><br><br>C/06
                 </td>
-                <td colspan="2" style="background-color: lightskyblue;">
+                <td class="wednesday11" colspan="2"  class="practice">
                     ESPORT<br>J.Rozhon, J.Čubík,..<br>POREB317, C/05
                 </td>
-                <td></td>
-                <td></td>
+                <td class="wednesday13"></td>
+                <td class="wednesday14"></td>
             </tr>
-            <tr>
+            <tr id="thursday">
                 <th style="background-color: lightgray">Thursday</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="thursday1"></td>
+                <td class="thursday2"></td>
+                <td class="thursday3"></td>
+                <td class="thursday4"></td>
+                <td class="thursday5"></td>
+                <td class="thursday6"></td>
+                <td class="thursday7"></td>
+                <td class="thursday8"></td>
+                <td class="thursday9"></td>
+                <td class="thursday10"></td>
+                <td class="thursday11"></td>
+                <td class="thursday12"></td>
+                <td class="thursday13"></td>
+                <td class="thursday14"></td>
             </tr>
-            <tr>
+            <tr id="friday">
                 <th style="background-color: lightgray">Friday</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="friday1"></td>
+                <td class="friday2"></td>
+                <td class="friday3"></td>
+                <td class="friday4"></td>
+                <td class="friday5"></td>
+                <td class="friday6"></td>
+                <td class="friday7"></td>
+                <td class="friday8"></td>
+                <td class="friday9"></td>
+                <td class="friday10"></td>
+                <td class="friday11"></td>
+                <td class="friday12"></td>
+                <td class="friday13"></td>
+                <td class="friday14"></td>
             </tr>
         </tbody>
     </table>

@@ -1,0 +1,102 @@
+body {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1.5px solid #000;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+td, th {
+    border: 1.5px solid #000;
+    padding: 0.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.lecture {
+    background-color: #f44336;
+    opacity: .7;
+}
+
+.lecture:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.practice {
+    background-color: #008CBA;
+    opacity: .7;
+}
+
+.practice:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.highlight {
+    opacity: 1;
+}
+
+header {
+    padding: 10px;
+}
+
+#time {
+    padding: 10px;
+    display: inline-block;
+}
+
+header button {
+    margin: 5px;
+    transition-duration: 0.4s;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+}
+
+header .button-blue {
+    border: 2px solid #008CBA;
+    color: #008CBA;
+}
+
+header .button-red {
+    border: 2px solid #f44336;
+    color: #f44336;
+}
+
+header .button-blue:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+header .button-red:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+header .button-black {
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+header .button-black:hover {
+    background-color: #000000;
+    color: white;
+}
+
+#timer {
+    display: none;
+    width: 2px;
+    background-color: red;
+    position: absolute;
+}
+
