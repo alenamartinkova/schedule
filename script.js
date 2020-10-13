@@ -43,7 +43,7 @@ function updateTimeLine(dateObject) {
             document.getElementById('timer').style.display = "block";
             document.getElementById('timer').style.top = document.getElementById(tr).getBoundingClientRect().top + "px";
             document.getElementById('timer').style.height = document.getElementById(tr).getBoundingClientRect().height + "px";
-            var minutesInLesson = ((dateObject.getHours()*60 + dateObject.getMinutes()) - (60 * 7 + 15)) % 105;
+            var minutesInLesson = ((dateObject.getHours()*60 + dateObject.getMinutes()) - (60 * 7)) % 105;
             document.getElementById('timer').style.left = document.getElementsByClassName(tdName)[0].getBoundingClientRect().left + minutesInLesson + "px";
         }
     }
