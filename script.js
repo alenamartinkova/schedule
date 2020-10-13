@@ -43,6 +43,9 @@ function updateTimeLine(dateObject) {
             document.getElementById('timer').style.top = document.getElementById(tr).getBoundingClientRect().top + "px";
             document.getElementById('timer').style.height = document.getElementById(tr).getBoundingClientRect().height + "px";
             var minutesInLesson = ((dateObject.getHours()*60 + dateObject.getMinutes()) - (60 * 7 + 15)) % 105;
+            if (minutesInLesson > 45) {
+                minutesInLesson = minutesInLesson - 45;
+            }
             var oneHour = 45;
             var percentage = (minutesInLesson * 100) / oneHour;
             var width = document.getElementById(tdName).getBoundingClientRect().width * (percentage/100);
