@@ -23,28 +23,27 @@ function updateTimeLine(dateObject) {
 
     if(tr == "weekend") {
         var tr = "friday";
-        var tdName = "friday14";
+        var tdName = "fourteenthLesson";
         document.getElementById('timer').style.display = "block";
         document.getElementById('timer').style.top = document.getElementById(tr).getBoundingClientRect().top + "px";
         document.getElementById('timer').style.height = document.getElementById(tr).getBoundingClientRect().height + "px";
-        var width = document.getElementsByClassName(tdName)[0].getBoundingClientRect().width;
-        document.getElementById('timer').style.left = document.getElementsByClassName(tdName)[0].getBoundingClientRect().left + width + "px";
+        var width = document.getElementById(tdName).getBoundingClientRect().width;
+        document.getElementById('timer').style.left = document.getElementById(tdName).getBoundingClientRect().left + width + "px";
     } else {
         var td = getColumn(dateObject);
         if(td == 0) {
-            td = 1;
-            var tdName = tr+td;
+            var tdName = "firstLesson";
             document.getElementById('timer').style.display = "block";
             document.getElementById('timer').style.top = document.getElementById(tr).getBoundingClientRect().top + "px";
             document.getElementById('timer').style.height = document.getElementById(tr).getBoundingClientRect().height + "px";
-            document.getElementById('timer').style.left = document.getElementsByClassName(tdName)[0].getBoundingClientRect().left + "px";
+            document.getElementById('timer').style.left = document.getElementById(tdName).getBoundingClientRect().left + "px";
         } else {
-            var tdName = tr+td;
+            var tdName = td;
             document.getElementById('timer').style.display = "block";
             document.getElementById('timer').style.top = document.getElementById(tr).getBoundingClientRect().top + "px";
             document.getElementById('timer').style.height = document.getElementById(tr).getBoundingClientRect().height + "px";
-            var minutesInLesson = ((dateObject.getHours()*60 + dateObject.getMinutes()) - (60 * 7)) % 105;
-            document.getElementById('timer').style.left = document.getElementsByClassName(tdName)[0].getBoundingClientRect().left + minutesInLesson + "px";
+            var minutesInLesson = ((dateObject.getHours()*60 + dateObject.getMinutes()) - (60 * 7 + 15)) % 105;
+            document.getElementById('timer').style.left = document.getElementById(tdName).getBoundingClientRect().left + minutesInLesson + "px";
         }
     }
 
@@ -57,33 +56,33 @@ function getColumn(d) {
     d2.setHours(7); d2.setMinutes(15);
 
     if(d < d2) lesson = 0;
-    if(d >= d2) lesson = 1;
-    d2.setHours(8); d2.setMinutes(0);
-    if(d >= d2) lesson = 2;
-    d2.setHours(9); d2.setMinutes(0);
-    if(d >= d2) lesson = 3;
-    d2.setHours(9); d2.setMinutes(45);
-    if(d >= d2) lesson = 4;
-    d2.setHours(10); d2.setMinutes(45);
-    if(d >= d2) lesson = 5;
-    d2.setHours(11); d2.setMinutes(30);
-    if(d >= d2) lesson = 6;
-    d2.setHours(12); d2.setMinutes(30);
-    if(d >= d2) lesson = 7;
-    d2.setHours(13); d2.setMinutes(15);
-    if(d >= d2) lesson = 8;
-    d2.setHours(14); d2.setMinutes(15);
-    if(d >= d2) lesson = 9;
-    d2.setHours(15); d2.setMinutes(0);
-    if(d >= d2) lesson = 10;
-    d2.setHours(16); d2.setMinutes(0);
-    if(d >= d2) lesson = 11;
-    d2.setHours(16); d2.setMinutes(45);
-    if(d >= d2) lesson = 12;
-    d2.setHours(17); d2.setMinutes(45);
-    if(d >= d2) lesson = 13;
-    d2.setHours(18); d2.setMinutes(30);
-    if(d >= d2) lesson = 14;
+    if(d >= d2) lesson = "firstLesson";
+    d2.setHours(8); d2.setMinutes(0); d2.setSeconds(0);
+    if(d >= d2) lesson = "secondLesson";
+    d2.setHours(9); d2.setMinutes(0); d2.setSeconds(0);
+    if(d >= d2) lesson = "thirdLesson";
+    d2.setHours(9); d2.setMinutes(45); d2.setSeconds(0);
+    if(d >= d2) lesson = "fourthLesson";
+    d2.setHours(10); d2.setMinutes(45); d2.setSeconds(0);
+    if(d >= d2) lesson = "fifthLesson";
+    d2.setHours(11); d2.setMinutes(30); d2.setSeconds(0);
+    if(d >= d2) lesson = "sixthLesson";
+    d2.setHours(12); d2.setMinutes(30); d2.setSeconds(0);
+    if(d >= d2) lesson = "seventhLesson";
+    d2.setHours(13); d2.setMinutes(15); d2.setSeconds(0);
+    if(d >= d2) lesson = "eighthLesson";
+    d2.setHours(14); d2.setMinutes(15); d2.setSeconds(0);
+    if(d >= d2) lesson = "ninthLesson";
+    d2.setHours(15); d2.setMinutes(0); d2.setSeconds(0);
+    if(d >= d2) lesson = "tenthLesson";
+    d2.setHours(16); d2.setMinutes(0); d2.setSeconds(0);
+    if(d >= d2) lesson = "eleventhLesson";
+    d2.setHours(16); d2.setMinutes(45); d2.setSeconds(0);
+    if(d >= d2) lesson = "twelfthLesson";
+    d2.setHours(17); d2.setMinutes(45); d2.setSeconds(0);
+    if(d >= d2) lesson = "thirteenthLesson";
+    d2.setHours(18); d2.setMinutes(30); d2.setSeconds(0);
+    if(d >= d2) lesson = "fourteenthLesson";
 
     return lesson;
 }

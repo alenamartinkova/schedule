@@ -96,7 +96,8 @@ header .button-black:hover {
 #timer {
     display: none;
     width: 2px;
-    background-color: red;
+    background-color: greenyellow;
     position: absolute;
+    z-index: 100;
 }
 

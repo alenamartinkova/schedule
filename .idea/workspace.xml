@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d9761a0d-c4a3-4bab-ac19-9062f4f591bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602506178005</updated>
       <workItem from="1602506182948" duration="4164000" />
+      <workItem from="1602595278901" duration="1513000" />
+      <workItem from="1602597221821" duration="557000" />
     </task>
     <servers />
   </component>
@@ -72,10 +76,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1602509772895">
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1602595761345">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-1920.-334.1920.1080@0.0.1440.900" timestamp="1602509772895" />
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-1920.-334.1920.1080@0.0.1440.900" timestamp="1602595761345" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1602510227805">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
